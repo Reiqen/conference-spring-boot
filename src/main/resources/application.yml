@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: ${DB_URL} # возьмёт url из переменной DB_URL, которая указана в Edit Configurations. Так данные будут скрыты и доступны только тем, кто настроит переменные в своем проекте
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true # отключает возможное исключение во время запуска приложения о создании объекта Lob
+server:
+  port: 8082
+
+app:
+  version: 1.0.0
+
+# Можно смиксовать YML-файл и .properties-файл, раскидать параметры по этим двум файлам
