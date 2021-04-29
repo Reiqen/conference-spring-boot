@@ -19,4 +19,8 @@ server:
 app:
   version: 1.0.0
 
+java:
+  runtime:
+    version: 16
+
 # Можно смиксовать YML-файл и .properties-файл, раскидать параметры по этим двум файлам
